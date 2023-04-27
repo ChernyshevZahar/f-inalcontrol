@@ -1,7 +1,7 @@
 ﻿Console.Write("Укажите размер массива ");
 int ArraySize = int.Parse(Console.ReadLine());
 
-UserInput(ArraySize);
+PrintArray(UserInput(ArraySize));
 
 string[] UserInput(int num){
     string[] arr = new string[num];
@@ -9,7 +9,13 @@ string[] UserInput(int num){
     {   
         Console.Write($"Укажите {i+1} элемент массива: ");
         arr[i] = Console.ReadLine();
-        Console.WriteLine(arr[i]);
     }
     return arr;
+}
+
+void PrintArray(string[] arr){
+    for (int i = 0; i < arr.Length; i++)
+    {
+        Console.WriteLine(arr[i]);
+    }
 }
